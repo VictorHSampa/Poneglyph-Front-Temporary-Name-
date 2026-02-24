@@ -30,12 +30,12 @@ function Login() {
         <input name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
         <input name='password' placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
         <button type='button' onClick={handleLogin}>Login</button>
+        <div className='register'>
+        <h1>Don't have an account?<a href='/register'> Register here</a></h1>
+        </div>
       </form>
-
-      <div className='register'>
-        <h1>Don't have an account?</h1>
-        <button type='button'>Register</button>
-      </div>
+       
+      
 
     </div>
   )
