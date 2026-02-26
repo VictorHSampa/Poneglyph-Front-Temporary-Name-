@@ -6,7 +6,7 @@ import Login from './pages/login'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/*<Home />*/}
-    <Login />
+    <Home />
+    {/*<Login />*/}
   </StrictMode>,
 )

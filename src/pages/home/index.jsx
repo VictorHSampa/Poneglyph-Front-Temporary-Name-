@@ -1,5 +1,4 @@
 import { use, useState, useRef } from 'react'
-import viteLogo from '/vite.svg'
 import './style.css'
 import Trash from '../../assets/trash.svg'
 import api from '../../services/api'
@@ -58,8 +57,7 @@ function Home() {
 
         
 
-
-      {Object.values(users).map((user) => {
+      {users.map((user) => {
         return (
           <div key={user.username} className='card'> 
             <div>
