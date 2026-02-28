@@ -50,7 +50,6 @@ function Home() {
           <input name='username' placeholder='Username' ref={inputUsername}/>
           <input name='password' placeholder='Password' type='password' ref={inputPassword}/>
           <input name='email' placeholder='Email' type='email' ref={inputEmail}/>
-          <input name='name' placeholder='Name' ref={inputName}/>
           <input name='fav_leader' placeholder='Favorite Leader' ref={inputFavLeader}/>
           <button type='button' onClick={createUser}>Register</button>
         </form>
