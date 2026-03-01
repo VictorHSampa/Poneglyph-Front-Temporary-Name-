@@ -19,7 +19,7 @@ function Profile() {
   }, [])
 
   return (
-    <div className='container'>
+    <div className='profile-container'>
       <h1 className = "profile-title">My Profile</h1>
         <div className='leader-image'>
           <img src={user.leader_image} alt={user.fav_leader} />

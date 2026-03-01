@@ -42,10 +42,10 @@ function Home() {
 
   return (
       
-      <div className='container'>
+      <div className='home-container'>
         <h1>Welcome to Poneglyph</h1>
         
-        <form>
+        <form className='register-form'>
           <h1>Create Account</h1>
           <input name='username' placeholder='Username' ref={inputUsername}/>
           <input name='password' placeholder='Password' type='password' ref={inputPassword}/>

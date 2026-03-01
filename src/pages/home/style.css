@@ -10,10 +10,10 @@ h1{
   font-size: 36px;
 }
 
-form {
+.register-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 30px;  
   padding: 30px;
   border-radius: 10px;
@@ -58,7 +58,7 @@ form {
 
   & p{
     color:#fff;
-    font-weight: bold;
+    font-weight: medium;
 
     & span{
       font-weight: normal;

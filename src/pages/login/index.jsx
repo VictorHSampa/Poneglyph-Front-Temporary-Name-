@@ -1,7 +1,5 @@
 import { use, useState, useRef } from 'react'
-import viteLogo from '/vite.svg'
 import './style.css'
-import Trash from '../../assets/trash.svg'
 import api from '../../services/api'
 import { useEffect } from 'react'
 
@@ -24,15 +22,17 @@ function Login() {
 
   return (
     <div className='container'>
-      <h1>Welcome to Poneglyph</h1>
-      <form>
-        <h1>Login</h1>
-        <input name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <input name='password' placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-        <button type='button' onClick={handleLogin}>Login</button>
-        <div className='register'>
-        <h1>Don't have an account?<a href='/register'> Register here</a></h1>
+      <form className = 'Login-form'>
+        <div className = 'login-header'>
+        <h1>WELCOME BACK</h1>
+        <p>Please enter your details</p>
         </div>
+        <p>Email</p>
+        <input name='email' placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <p>Password</p>
+        <input name='password' placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <button type='button' onClick={handleLogin}>Sign in</button>
+        <p className = 'register'>Don't have an account?<a href='/register'> Sign up for free!</a></p>
       </form>
        
       

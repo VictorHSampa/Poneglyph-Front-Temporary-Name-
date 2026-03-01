@@ -4,11 +4,17 @@ import './index.css'
 import Home from './pages/home'
 import Login from './pages/login'
 import Profile from './pages/profile'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Profile />
-    {/*<Login />*/}
-    {/*<Home />*/}
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Home />} />
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
+    </Router>
+
   </StrictMode>,
 )
