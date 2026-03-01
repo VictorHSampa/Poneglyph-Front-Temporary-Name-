@@ -1,6 +1,6 @@
 import { use, useState, useRef } from 'react'
 import './style.css'
-import Trash from '../../assets/trash.svg'
+import RegisterImage from '../../assets/uta.webp'
 import api from '../../services/api'
 import { useEffect } from 'react'
 
@@ -43,35 +43,27 @@ function Home() {
   return (
       
       <div className='home-container'>
-        <h1>Welcome to Poneglyph</h1>
-        
         <form className='register-form'>
-          <h1>Create Account</h1>
-          <input name='username' placeholder='Username' ref={inputUsername}/>
-          <input name='password' placeholder='Password' type='password' ref={inputPassword}/>
-          <input name='email' placeholder='Email' type='email' ref={inputEmail}/>
-          <input name='fav_leader' placeholder='Favorite Leader' ref={inputFavLeader}/>
-          <button type='button' onClick={createUser}>Register</button>
-        </form>
-
-        
-
-      {users.map((user) => {
-        return (
-          <div key={user.username} className='card'> 
-            <div>
-            <p>Username: <span>{user.username}</span></p>
-            <p>Password: <span>{user.password}</span></p>
-            <p>Email: <span>{user.email}</span></p>
-            <p>Name: <span>{user.name}</span></p>
-            <p>Favorite Leader: <span>{user.fav_leader}</span></p>
+          <div className='register-header'>
+            <h1>WELCOME TO PONEGLYPH!</h1>
+            <p>Please enter your details</p>
           </div>
-          <button onClick={() => deleteUser(user.id)}>
-            <img src={Trash} alt="Trash Icon"/>
-          </button>
+          <p>Username</p>
+          <input name='username' placeholder='Username' ref={inputUsername}/>
+          <p>Favorite Leader</p>
+          <input name='fav_leader' placeholder='Favorite Leader' ref={inputFavLeader}/>
+          <p>Email</p>
+          <input name='email' placeholder='Email' type='email' ref={inputEmail}/>
+          <p>Password</p>
+          <input name='password' placeholder='Password' type='password' ref={inputPassword}/>
+          <button type='button' onClick={createUser}>Register</button>
+          <div className='login-redirect'>
+          <p>Already have an account?<a href='/'> Login</a></p>
+          </div>
+        </form>
+        <div className='register-image'>
+          <img src={RegisterImage} alt='Register Image' />
         </div>
-      )
-    })}
 
     
 

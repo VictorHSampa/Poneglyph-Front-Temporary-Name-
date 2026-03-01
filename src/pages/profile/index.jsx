@@ -6,9 +6,10 @@ const defaultUserId = 2
 
 function Profile() {
   const [user, setUser] = useState(() => [])
+  const token = localStorage.getItem('token')
 
   async function getUser() {
-    const userApi = await api.get(`/user/profile/${defaultUserId}`)
+    const userApi = await api.get(`/user/profile/${defaultUserId}`, { headers: { Authorization: `Bearer ${token}`}})
     setUser(userApi.data)
     console.log(userApi.data);
   }

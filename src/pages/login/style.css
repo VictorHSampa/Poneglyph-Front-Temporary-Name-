@@ -7,11 +7,10 @@
   gap: 0;
 }
 
-/* ensure the two direct children share available space */
 .container > .Login-form,
 .container > .login-image {
   flex: 1 1 50%;
-  max-width: 39%;
+  max-width: 27.5%;
   height: 610px; 
 }
 
@@ -20,14 +19,7 @@
   font-size: 34px;
   margin-bottom:17px;
 }
-p{
-  color:#F2F2F2;
-  margin-top:20px;
-  margin-bottom:7px;
-  font-weight: 500;
-  font-size:14px;
-  letter-spacing: 0.1em;
-}
+
 
 
 
@@ -42,13 +34,22 @@ p{
   height: 90%;
   max-width: none;
 
+  & p{
+  color:#F2F2F2;
+  margin-top:20px;
+  margin-bottom:7px;
+  font-weight: 500;
+  font-size:14px;
+  letter-spacing: 0.1em;
+}
+
   & button{
     
     align-items: center;
     margin-top:60px;
     border-radius: 10px;
     color: #182259;
-    background-color: #91A3D9;
+    background-color: #D4AF37;
     height: 41px;
     width: 334px;
     font-weight: bold;
@@ -72,7 +73,10 @@ p{
 
 .login-header{
   text-align: center;
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
+  & h1{
+    color:#D4AF37
+  }  
 }
 
 .register{
@@ -86,6 +90,10 @@ p{
   align-items: left;
   display: flex;
   padding-left: 50px;
+  & p {
+    font-size: 10px;
+    
+  }
   & a{
     font-size: 10px;
     font-weight: normal;

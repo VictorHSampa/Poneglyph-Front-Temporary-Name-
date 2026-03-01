@@ -3,19 +3,23 @@ import './style.css'
 import api from '../../services/api'
 import { useEffect } from 'react'
 import LoginImage from '../../assets/uta.webp'
+import {useNavigate} from 'react-router-dom'
 
 
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const navigate = useNavigate()
 
-  const handleLogin = async () => {
+  const handleLogin = async (event) => {
+    event.preventDefault()
     try {
       const response = await api.post('/user/login', {
         email,
         password
       })
-      console.log(response.data)
+      localStorage.setItem('token', response.data.token)
+      navigate("/profile")
     } catch (error) {
       console.error(error)
     }
@@ -33,7 +37,9 @@ function Login() {
         <p>Password</p>
         <input name='password' placeholder='Password' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
         <button type='button' onClick={handleLogin}>Sign in</button>
-        <p className='register'>Don't have an account?<a href='/register'> Sign up for free!</a></p>
+        <div className='register'>
+          <p>Don't have an account?<a href='/register'> Sign up for free!</a></p>
+        </div>
       </form>
       <div className='login-image'>
           <img src={LoginImage} alt='Login Image' />
