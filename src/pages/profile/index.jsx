@@ -2,16 +2,16 @@ import { use, useState, useRef } from 'react'
 import './style.css'
 import api from '../../services/api'
 import { useEffect } from 'react'
-const defaultUserId = 2 
+
 
 function Profile() {
   const [user, setUser] = useState(() => [])
   const token = localStorage.getItem('token')
 
   async function getUser() {
-    const userApi = await api.get(`/user/profile/${defaultUserId}`, { headers: { Authorization: `Bearer ${token}`}})
+    const userApi = await api.get(`/user/profile`, { headers: { Authorization: `Bearer ${token}`}})
     setUser(userApi.data)
-    console.log(userApi.data);
+
   }
 
   useEffect(() => {
@@ -25,8 +25,8 @@ function Profile() {
         <div className='leader-image'>
           <img src={user.leader_image} alt={user.fav_leader} />
         </div>
-        <h1 className = "fav-leader">{user.fav_leader}</h1>
         <p> Username: <span>{user.username}</span></p>
+        <p className = "fav-leader">Favorite Leader: <span>{user.fav_leader}</span></p>
         <p> Email: <span>{user.email}</span></p>
         <button type='button'>Edit Profile</button>
         <button type='button'>Change Password</button>
