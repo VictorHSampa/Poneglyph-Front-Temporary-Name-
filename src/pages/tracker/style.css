@@ -1,7 +1,7 @@
-.profile-container{
+.tracker-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
   padding-top: 100px;
   background-color: #182259;
@@ -38,26 +38,12 @@
   }
 }
 
-.fav-leader{
-  color: #fff;
-  font-size: 24px;
-}
-.profile-title{
-  color: #fff;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-
-
-.leader-image{
+.tracker-leader-image{
     width: 150px;
-    height: 150px;
-    border-radius: 100%; 
+    height: 150px; 
     overflow: hidden; 
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
+     
 
     & img{
         width: 100%;

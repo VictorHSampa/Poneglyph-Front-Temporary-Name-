@@ -26,9 +26,9 @@ function Tracker() {
 
        {tournament.map((tournament) => {
         return (
-          <div key={tournament.id} className='card'> 
+          <div key={tournament.id} className='tournament-card'> 
             <div>
-            <img src={tournament.leader_image} alt={tournament.leader_image} />
+            <img className= 'tracker-leader-image'src={tournament.leader_image} alt={tournament.leader_image} />
             <p>{tournament.title}</p>
           </div>
         </div>
