@@ -12,6 +12,10 @@ p{
   font-family: "Montserrat", sans-serif;
 }
 
+label{
+  font-family: "Montserrat", sans-serif;
+}
+
 input{
  font-family: "Montserrat", sans-serif; 
 }
@@ -19,6 +23,6 @@ input{
 body {
   min-height: 100vh;
   width: 100vw;
-  background: linear-gradient(180deg, #535bf2);
+  background: linear-gradient(180deg, #000);
 }
 

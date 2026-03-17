@@ -2,7 +2,7 @@ import { use, useState, useRef } from 'react'
 import './style.css'
 import api from '../../services/api'
 import { useEffect } from 'react'
-
+import Header from '../../components/Header'
 
 function Tracker() {
   const [tournament, setTournament] = useState(() => [])
@@ -20,9 +20,11 @@ function Tracker() {
   }, [])
 
   return (
-    <div className='tracker-container'>
-      <h1 className = "tracker-title">TOURNAMENTS</h1>
-      <button type='button'>New Tournament</button>
+    <>
+      <Header />
+      <div className='tracker-container'>
+        <h1 className = "tracker-title">TOURNAMENTS</h1>
+        <button type='button'>New Tournament</button>
 
        {tournament.map((tournament) => {
         return (
@@ -34,8 +36,8 @@ function Tracker() {
         </div>
       )
     })}
-    </div>
-       
+      </div>
+    </>
   )
 }
 

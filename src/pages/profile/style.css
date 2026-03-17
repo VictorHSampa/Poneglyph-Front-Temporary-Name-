@@ -1,67 +1,108 @@
-.profile-container{
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/background.png');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 100px;
+  padding: 50px 0;
   background-color: #182259;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 40%;
+  margin: 50px auto;
+  max-width: 30%;
   border-radius: 10px;
-  gap:20px;
-  & p{
-    color:#fff;
-    font-weight: 500;
-    font-size:14px;
-    letter-spacing: 0.1em;
-
-    & span{
-      font-weight: normal;
-    }
-  }
-  & button{
-    align-items: center;
-    border-radius: 10px;
-    margin:auto;
-    margin-top:10px;
-    color: #182259;
-    background-color: #D4AF37;
-    height: 50px;
-    width: 300px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  & button:hover{
-    opacity: 0.8;
-  }
+  gap: 10px;
+  opacity: 90%;
 }
 
-.fav-leader{
+.profile-container p {
   color: #fff;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin: 0;
 }
-.profile-title{
+
+.profile-container button {
+  border-radius: 10px;
+  margin: 10px auto 0;
+  color: #182259;
+  background-color: #D4AF37;
+  height: 40px;
+  width: 300px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-container button:hover {
+  opacity: 0.8;
+}
+
+.profile-container input {
+  border: 1px solid #48456c;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #182259;
+  color: #fff;
+  padding-left: 10px;
+  outline: none;
+  width: 100%;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 300px;
+}
+
+.profile-form label {
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.profile-form input {
+  width: 100%;
+}
+
+.profile-title {
+  text-align: center;
   color: #fff;
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
+.leader-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+}
 
-
-.leader-image{
-    width: 150px;
-    height: 150px;
-    border-radius: 100%; 
-    overflow: hidden; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-
-    & img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-    }
+.leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

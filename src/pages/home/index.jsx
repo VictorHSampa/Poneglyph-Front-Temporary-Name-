@@ -3,7 +3,7 @@ import './style.css'
 import RegisterImage from '../../assets/uta.webp'
 import api from '../../services/api'
 import { useEffect } from 'react'
-
+import Header from '../../components/Header'
 
 function Home() {
   const [users, setUsers] = useState(() => [])
@@ -41,7 +41,8 @@ function Home() {
   }, [])
 
   return (
-      
+    <>
+      <Header />
       <div className='home-container'>
         <form className='register-form'>
           <div className='register-header'>
@@ -64,12 +65,8 @@ function Home() {
         <div className='register-image'>
           <img src={RegisterImage} alt='Register Image' />
         </div>
-
-    
-
-        
-        
       </div>
+    </>
   )
 }
 
